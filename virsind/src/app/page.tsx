@@ -146,7 +146,7 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center gap-4">
 
-            <a href="http://url2734.distrokid.com/ls/click?upn=u001.a0grtTtFNGObbwv02PitCPUodymsTWKXNsD1pT7nhD2OIAQURiTYV-2BBHjWrBTloRyX8hjcUV-2B04qm400xmlfdDFlMuA-2F3rcr50jpa3QGs-2BsYEQwl95Nr8N4fxAfFz-2B35J72318ldRSlnRzLPTIkiCr2U30ynih-2BOKmUKnaVvT7E-3DWpJm_439mAFphRDh7Dab4MXxng9Ub53seaVu6r6z9fZ47MoqZ2h6cOyC8bcFBY7yeXSSmG5em2ypC7LpqfOgvqHG4in51PckIhwu4jxQRtefbFgCfJo2FKqr-2BwgxFv5VWTCIurpfh4JiQmCp7oOVS64rjGyTNFW1-2FPlv9JbfY82GZblhI8f7RK-2B8q3ayNd5V-2B81etAzLu-2BBjIFzNFrEUdJ9fwqA-3D-3D" target="_blank" rel="noopener noreferrer"
+            <a href="https://open.spotify.com/track/4E2Q8dBIwCYeFTDiY9UPm4?si=28a512975f0d490d" target="_blank" rel="noopener noreferrer"
               className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
               ref={(el) => {sectionRefs.current[2] = el}}
             >
@@ -159,7 +159,7 @@ export default function Home() {
               />
             </a>
 
-            <p className="text-white">Pre-save Mind</p>
+            <p className="text-white">Mind out.</p>
 
           </div>
 
