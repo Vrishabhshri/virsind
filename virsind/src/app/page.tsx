@@ -146,12 +146,12 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center gap-4">
 
-            <a href="https://open.spotify.com/track/4E2Q8dBIwCYeFTDiY9UPm4?si=28a512975f0d490d" target="_blank" rel="noopener noreferrer"
+            <a href="https://open.spotify.com/track/0C7NMGfUl0tSp2fSOvPT9g?si=c321d5f58adc4b3f" target="_blank" rel="noopener noreferrer"
               className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
               ref={(el) => {sectionRefs.current[2] = el}}
             >
               <Image
-                src="/images/Mind.jpg"
+                src="/images/Chill.jpg"
                 width={200}
                 height={200}
                 alt="Mind album cover"
@@ -159,7 +159,7 @@ export default function Home() {
               />
             </a>
 
-            <p className="text-white">Mind out.</p>
+            <p className="text-white">Chill out.</p>
 
           </div>
 
