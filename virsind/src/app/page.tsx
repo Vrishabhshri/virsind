@@ -151,7 +151,7 @@ export default function Home() {
               ref={(el) => {sectionRefs.current[2] = el}}
             >
               <Image
-                src="/images/Chill.jpg"
+                src="/images/Mind.jpg"
                 width={200}
                 height={200}
                 alt="Mind album cover"
@@ -159,7 +159,7 @@ export default function Home() {
               />
             </a>
 
-            <p className="text-white">Chill out.</p>
+            <p className="text-white">Mind out.</p>
 
           </div>
 
