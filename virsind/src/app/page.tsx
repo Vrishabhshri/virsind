@@ -91,7 +91,7 @@ export default function Home() {
           className='mx-4 text-white hover:text-[rgb(101,212,110)] transition-all duration-300 transform hover:scale-125'>
             <FaSpotify size={24}/>
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer"
+          <a href="https://music.apple.com/us/artist/vir-sind/1794861294" target="_blank" rel="noopener noreferrer"
           className='mx-4 text-white hover:text-[rgb(230,64,71)] transition-all duration-300 transform hover:scale-125'>
             <FaApple size={24}/>
           </a>
