@@ -100,10 +100,10 @@ export default function Home() {
         {/* Image header */}
         <div className={`w-full h-[400px] ${transitionCSS}`} ref={(el) => {sectionRefs.current[0] = el}}>
           <Image
-            src="/images/Mind.jpg"
+            src="/images/VirSind.jpeg"
             width={500}
             height={500}
-            alt="Mind album cover"
+            alt="Vir sind cover"
             className={`w-full h-full object-cover object-center`}
           />
           <div className="relative inset-0 flex justify-center items-center -mt-60">
@@ -146,20 +146,20 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center gap-4">
 
-            <a href="https://open.spotify.com/track/0C7NMGfUl0tSp2fSOvPT9g?si=c321d5f58adc4b3f" target="_blank" rel="noopener noreferrer"
+            <a href="https://distrokid.com/hyperfollow/virsind/whiskey?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid" target="_blank" rel="noopener noreferrer"
               className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
               ref={(el) => {sectionRefs.current[2] = el}}
             >
               <Image
-                src="/images/Mind.jpg"
+                src="/images/Whiskey.jpg"
                 width={200}
                 height={200}
-                alt="Mind album cover"
+                alt="Whiskey album cover"
                 className={`rounded-2xl object-cover`}
               />
             </a>
 
-            <p className="text-white">Mind out.</p>
+            <p className="text-white">Whiskey pre-save.</p>
 
           </div>
 
