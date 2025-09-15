@@ -177,8 +177,9 @@ export default function Home() {
 
           <p className="w-3/5 py-5">
 
-            An emerging force in R&B, Vir Sind carves his own lane with hypnotic melodies and lush Rhodes textures, 
-            weaving a sonic journey that carries his story like a midnight train through an endless dream.
+            An emerging force in R&B and Indie, Vir Sind.
+            {/* carves his own lane with hypnotic melodies and lush Rhodes textures, 
+            weaving a sonic journey that carries his story like a midnight train through an endless dream. */}
             
           </p>
 
