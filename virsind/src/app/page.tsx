@@ -146,7 +146,7 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center gap-4">
 
-            <a href="https://distrokid.com/hyperfollow/virsind/whiskey?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid" target="_blank" rel="noopener noreferrer"
+            <a href="https://open.spotify.com/track/17540eB7EYN67q08OST2JS?si=3f99c996c1954c6a" target="_blank" rel="noopener noreferrer"
               className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
               ref={(el) => {sectionRefs.current[2] = el}}
             >
