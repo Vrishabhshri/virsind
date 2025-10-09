@@ -159,7 +159,7 @@ export default function Home() {
               />
             </a>
 
-            <p className="text-white">Whiskey pre-save.</p>
+            <p className="text-white">Whiskey</p>
 
           </div>
 
