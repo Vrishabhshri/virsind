@@ -140,7 +140,7 @@ export default function Home() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className={`w-2/3 aspect-video rounded-2xl overflow-hidden ${transitionCSS}`}
+            className={`w-full md:w-2/3 aspect-video rounded-2xl overflow-hidden ${transitionCSS}`}
             ref={(el) => {sectionRefs.current[1] = el}}
           ></iframe>
 
