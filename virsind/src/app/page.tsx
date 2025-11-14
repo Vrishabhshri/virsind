@@ -127,7 +127,7 @@ export default function Home() {
           
         </div>
 
-        {/* YouTube Video and album image */}
+        {/* YouTube Video */}
         <div 
           className={`mt-10 
                       w-full
@@ -140,9 +140,19 @@ export default function Home() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className={`w-1/2 aspect-video rounded-2xl overflow-hidden ${transitionCSS}`}
+            className={`w-2/3 aspect-video rounded-2xl overflow-hidden ${transitionCSS}`}
             ref={(el) => {sectionRefs.current[1] = el}}
           ></iframe>
+
+        </div>
+
+        {/* More album covers grid */}
+        <div 
+          id="album-grid-covers-container"
+          className={`mt-10 
+                      w-full
+                      flex flex-col md:flex-row justify-center items-center gap-20`}
+        >
 
           <div className="flex flex-col justify-center items-center gap-4">
 
@@ -163,6 +173,63 @@ export default function Home() {
 
           </div>
 
+          <div className="flex flex-col justify-center items-center gap-4">
+
+            <a href="https://open.spotify.com/track/669t7ZnxJfWbKboUBP9D6x?si=95e292d0c4b0484d" target="_blank" rel="noopener noreferrer"
+              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
+              ref={(el) => {sectionRefs.current[3] = el}}
+            >
+              <Image
+                src="/images/Company.jpg"
+                width={200}
+                height={200}
+                alt="Company album cover"
+                className={`rounded-2xl object-cover`}
+              />
+            </a>
+
+            <p className="text-white">Company</p>
+
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-4">
+
+            <a href="https://open.spotify.com/track/27CHorLWfvEncK62bcZjfY?si=fed9b6ec6f6d4e0f" target="_blank" rel="noopener noreferrer"
+              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
+              ref={(el) => {sectionRefs.current[4] = el}}
+            >
+              <Image
+                src="/images/Petrichor.jpg"
+                width={200}
+                height={200}
+                alt="Petrichor album cover"
+                className={`rounded-2xl object-cover`}
+              />
+            </a>
+
+            <p className="text-white">Petrichor</p>
+
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-4">
+
+            <a href="https://open.spotify.com/track/30lcCU2VNNv0AijS91bEHN?si=faa620272b984d91" target="_blank" rel="noopener noreferrer"
+              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
+              ref={(el) => {sectionRefs.current[5] = el}}
+            >
+              <Image
+                src="/images/Risk-It-All.jpeg"
+                width={200}
+                height={200}
+                alt="Risk It All album cover"
+                className={`rounded-2xl object-cover`}
+              />
+            </a>
+
+            <p className="text-white">Risk It All</p>
+
+          </div>
+
         </div>
 
         {/* About us */}
@@ -172,7 +239,7 @@ export default function Home() {
                         w-full mt-10
                         bg-[rgb(77,156,185)]
                         flex justify-center items-center`}
-          ref={(el) => {sectionRefs.current[3] = el}}
+          ref={(el) => {sectionRefs.current[6] = el}}
         >
 
           <p className="w-3/5 py-5">
