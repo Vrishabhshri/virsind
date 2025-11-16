@@ -4,6 +4,7 @@ service cloud.firestore {
     match /connections/{connectionID} {
       allow read: if true;
       allow write: if true;
+      allow update, delete: if false;
     }
   }
 }
