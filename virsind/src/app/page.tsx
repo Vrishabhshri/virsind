@@ -1,15 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Typewriter } from 'nextjs-simple-typewriter'
 import { FaInstagram, FaYoutube, FaSpotify, FaApple } from 'react-icons/fa';
+import { createConnection } from "@/lib/connections";
+import { FirebaseError } from "firebase/app";
 
 export default function Home() {
 
   const sectionRefs = useRef<(HTMLDivElement | HTMLAnchorElement | null)[]>([]);
   const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const newID = () => Math.random().toString(36).slice(2, 9);
+  const [connectionText, setConnectionText] = useState('');
+  const [instaHandle, setInstaHandle] = useState('@');
+  const connectionsIntro = `I want to hear from you!
+                            Whether you have any suggestions or comments or just want to talk
+                            feel free to leave something below!`
 
   const transitionCSS = "opacity-0 transition-all duration-1000";
 
@@ -54,6 +62,48 @@ export default function Home() {
 
   }, []);
 
+  const onSubmit = (e: React.FormEvent) => {
+
+    e.preventDefault();
+    uploadConnection();
+
+  }
+
+  const uploadConnection = useCallback(async () => {
+
+    try {
+
+      const createdAt = new Date().toISOString();
+      const id = newID();
+      if (instaHandle === '@') await createConnection(id, { connectionID: id, text: connectionText, createdAt });
+      else await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle });
+
+      console.log("Uploaded successfully")
+
+    }
+    catch(err: unknown) {
+      if (err instanceof FirebaseError) {
+        console.error("Firebase error:", err.code, err.message);
+      } else {
+        console.error("Unknown error:", err);
+  }
+    }
+    
+
+  }, [connectionText, instaHandle]);
+
+  const connectionInstaHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    let value = e.target.value;
+
+    if (!value.startsWith("@")) {
+      value = "@" + value.replace(/@/g, "");
+    }
+
+    setInstaHandle(value);
+
+  }
+
   useEffect(() => {
 
     setTimeout(() => {
@@ -66,7 +116,7 @@ export default function Home() {
 
   return (
     <div className="bg-black
-                    min-w-screen min-h-screen
+                    w-screen h-screen
                     flex flex-col justify-start items-center">
 
       {isLoading && (
@@ -149,7 +199,7 @@ export default function Home() {
         {/* More album covers grid */}
         <div 
           id="album-grid-covers-container"
-          className={`mt-10 
+          className={`mt-20 
                       w-full
                       flex flex-col md:flex-row justify-center items-center gap-20`}
         >
@@ -229,6 +279,49 @@ export default function Home() {
             <p className="text-white">Risk It All</p>
 
           </div>
+
+        </div>
+
+        {/* Connections Area */}
+        <div className="w-full flex flex-col items-center mt-10 p-10 text-center">
+
+            <span className="w-2/3 text-white mb-4 text-lg">{connectionsIntro}</span>
+
+            <form className="flex flex-col gap-8 w-2/3
+                              bg-black"
+              onSubmit={onSubmit}
+            >
+              {/* Message Box */}
+              <textarea
+                value={connectionText}
+                onChange={(e) => setConnectionText(e.target.value)}
+                placeholder="Enter something, anything, everything..."
+                className="bg-white text-black border border-4 border-[rgb(77,156,185)]
+                            min-h-[100px] resize-y rounded-lg p-2"
+              />
+
+              {/* Instagram Handle */}
+              <div className="flex flex-col text-left">
+
+                <span className="text-white">Instagram Handle</span>
+                <input
+                  type="text"
+                  value={instaHandle}
+                  onChange={connectionInstaHandler}
+                  className="bg-white text-black border border-4 border-[rgba(77,156,185)]
+                              rounded-lg p-2"
+                />
+
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="bg-[rgb(77,156,185)] text-white p-2 rounded-lg cursor-pointer hover:bg-[rgb(111,213,249)]"
+              >
+                Submit
+              </button>
+            </form>
 
         </div>
 
