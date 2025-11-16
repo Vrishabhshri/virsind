@@ -8,6 +8,7 @@ export type Connection = {
     connectionID: string;
     text: string;
     instagram?: string;
+    email?: string;
     createdAt: string;
 
 }

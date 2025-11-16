@@ -15,6 +15,7 @@ export default function Home() {
   const newID = () => Math.random().toString(36).slice(2, 9);
   const [connectionText, setConnectionText] = useState('');
   const [instaHandle, setInstaHandle] = useState('@');
+  const [email, setEmail] = useState('');
   const connectionsIntro = `I want to hear from you!
                             Whether you have any suggestions or comments or just want to talk
                             feel free to leave something below!`
@@ -77,8 +78,7 @@ export default function Home() {
 
       const createdAt = new Date().toISOString();
       const id = newID();
-      if (instaHandle === '@') await createConnection(id, { connectionID: id, text: connectionText, createdAt });
-      else await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle });
+      await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle, email });
 
       alert("Uploaded successfully")
 
@@ -93,7 +93,7 @@ export default function Home() {
     }
     
 
-  }, [connectionText, instaHandle]);
+  }, [connectionText, instaHandle, email]);
 
   const connectionInstaHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
 
@@ -306,11 +306,25 @@ export default function Home() {
               {/* Instagram Handle */}
               <div className="flex flex-col text-left">
 
-                <span className="text-white">Instagram Handle</span>
+                <span className="text-white">Instagram Handle (Optional)</span>
                 <input
                   type="text"
                   value={instaHandle}
                   onChange={connectionInstaHandler}
+                  className="bg-white text-black border border-4 border-[rgba(77,156,185)]
+                              rounded-lg p-2"
+                />
+
+              </div>
+
+              {/* Email Handle */}
+              <div className="flex flex-col text-left">
+
+                <span className="text-white">Email (Optional)</span>
+                <input
+                  type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="bg-white text-black border border-4 border-[rgba(77,156,185)]
                               rounded-lg p-2"
                 />
