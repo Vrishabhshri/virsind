@@ -66,6 +66,8 @@ export default function Home() {
 
     e.preventDefault();
     uploadConnection();
+    setConnectionText("");
+    setInstaHandle("@");
 
   }
 
@@ -78,7 +80,7 @@ export default function Home() {
       if (instaHandle === '@') await createConnection(id, { connectionID: id, text: connectionText, createdAt });
       else await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle });
 
-      console.log("Uploaded successfully")
+      alert("Uploaded successfully")
 
     }
     catch(err: unknown) {
@@ -86,6 +88,7 @@ export default function Home() {
         console.error("Firebase error:", err.code, err.message);
       } else {
         console.error("Unknown error:", err);
+      alert("There was an error processing your connection request");
   }
     }
     
