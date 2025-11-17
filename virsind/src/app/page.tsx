@@ -140,7 +140,7 @@ export default function Home() {
 
         {/* NavBar */}
         <nav className="flex justify-center items-center p-4 bg-black">
-          <a href="https://www.instagram.com/vrishabhmusic" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/virsindofficial" target="_blank" rel="noopener noreferrer"
           className='mx-4 text-white hover:text-[rgb(222, 48, 138)] transition-all duration-300 transform hover:scale-125'>
             <FaInstagram size={24}/>
           </a>
