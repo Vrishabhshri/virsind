@@ -75,6 +75,13 @@ export default function Home() {
 
   const uploadConnection = useCallback(async () => {
 
+    if (connectionText === '') {
+
+      alert("Comments can't be empty. Please say something, anything, everything.");
+      return;
+
+    }
+
     try {
 
       const createdAt = new Date().toISOString();
