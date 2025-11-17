@@ -10,6 +10,7 @@ export type Connection = {
     instagram?: string;
     email?: string;
     createdAt: string;
+    reviewed: boolean;
 
 }
 

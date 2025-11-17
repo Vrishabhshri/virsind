@@ -79,7 +79,7 @@ export default function Home() {
 
       const createdAt = new Date().toISOString();
       const id = newID();
-      await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle, email });
+      await createConnection(id, { connectionID: id, text: connectionText, createdAt, instagram: instaHandle, email, reviewed: false });
 
       alert("Uploaded successfully")
 
