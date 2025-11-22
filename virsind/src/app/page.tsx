@@ -343,7 +343,7 @@ export default function Home() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-[rgb(77,156,185)] text-white p-2 rounded-lg cursor-pointer hover:bg-[rgb(111,213,249)]"
+                className="bg-[rgb(77,156,185)] p-2 rounded-lg cursor-pointer hover:bg-[rgb(111,213,249)]"
               >
                 Submit
               </button>
