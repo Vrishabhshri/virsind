@@ -18,7 +18,8 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const connectionsIntro = `I want to hear from you!
                             Whether you have any suggestions or comments or just want to talk
-                            feel free to leave something below!`
+                            feel free to leave something below! (Please leave a contact if you wish
+                            to be contacted. I have no way of reaching out if you don't. Thanks!)`
 
   const transitionCSS = "opacity-0 transition-all duration-1000";
 
