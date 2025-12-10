@@ -197,7 +197,7 @@ export default function Home() {
         >
 
           <iframe
-            src="https://www.youtube.com/embed/rV_G5tjZZVc?si=bzTlKeuNYHCvetXi&autoplay=1&mute=1&cc_load_policy=1"
+            src="https://www.youtube.com/embed/rV_G5tjZZVc?si=bzTlKeuNYHCvetXi&autoplay=1&mute=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
