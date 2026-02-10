@@ -218,77 +218,20 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center gap-4">
 
-            <a href="https://open.spotify.com/track/17540eB7EYN67q08OST2JS?si=3f99c996c1954c6a" target="_blank" rel="noopener noreferrer"
+            <a href="https://open.spotify.com/album/1dTxVY7fckyXEaEMMII1Yl?si=tmtKZCE0R8yUOyWr5KFeng" target="_blank" rel="noopener noreferrer"
               className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
               ref={(el) => {sectionRefs.current[2] = el}}
             >
               <Image
-                src="/images/Whiskey.jpg"
+                src="/images/Bittersweet-Demos-EP.jpg"
                 width={200}
                 height={200}
-                alt="Whiskey album cover"
+                alt="Bittersweet Demos EP album cover"
                 className={`rounded-2xl object-cover`}
               />
             </a>
 
-            <p className="text-white">Whiskey</p>
-
-          </div>
-
-          <div className="flex flex-col justify-center items-center gap-4">
-
-            <a href="https://open.spotify.com/track/669t7ZnxJfWbKboUBP9D6x?si=95e292d0c4b0484d" target="_blank" rel="noopener noreferrer"
-              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
-              ref={(el) => {sectionRefs.current[3] = el}}
-            >
-              <Image
-                src="/images/Company.jpg"
-                width={200}
-                height={200}
-                alt="Company album cover"
-                className={`rounded-2xl object-cover`}
-              />
-            </a>
-
-            <p className="text-white">Company</p>
-
-          </div>
-
-          <div className="flex flex-col justify-center items-center gap-4">
-
-            <a href="https://open.spotify.com/track/27CHorLWfvEncK62bcZjfY?si=fed9b6ec6f6d4e0f" target="_blank" rel="noopener noreferrer"
-              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
-              ref={(el) => {sectionRefs.current[4] = el}}
-            >
-              <Image
-                src="/images/Petrichor.jpg"
-                width={200}
-                height={200}
-                alt="Petrichor album cover"
-                className={`rounded-2xl object-cover`}
-              />
-            </a>
-
-            <p className="text-white">Petrichor</p>
-
-          </div>
-
-          <div className="flex flex-col justify-center items-center gap-4">
-
-            <a href="https://open.spotify.com/track/30lcCU2VNNv0AijS91bEHN?si=faa620272b984d91" target="_blank" rel="noopener noreferrer"
-              className={`${transitionCSS} transition-all duration-700 transform hover:scale-105`}
-              ref={(el) => {sectionRefs.current[5] = el}}
-            >
-              <Image
-                src="/images/Risk-It-All.jpeg"
-                width={200}
-                height={200}
-                alt="Risk It All album cover"
-                className={`rounded-2xl object-cover`}
-              />
-            </a>
-
-            <p className="text-white">Risk It All</p>
+            <p className="text-white">Bittersweet Demos EP Out!</p>
 
           </div>
 
